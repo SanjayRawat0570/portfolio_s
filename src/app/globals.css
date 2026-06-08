@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+/* Theme tokens — dark values are the defaults Tailwind emits to :root.
+   They are referenced via var(), so overriding them in .light re-themes
+   every utility at runtime. */
+@theme {
+  --color-bg: #0a0a0f;
+  --color-bg-soft: #11111a;
+  --color-card: #14141f;
+  --color-card-hover: #1a1a28;
+  --color-border: #232333;
+  --color-border-hover: #34344a;
+  --color-text: #e8e8f0;
+  --color-text-dim: #a0a0b8;
+  --color-text-faint: #6b6b85;
+  --color-accent: #7c5cff;
+  --color-accent2: #00d4ff;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+/* Non-theme vars used directly in inline styles (Background.tsx) */
+:root {
+  --glow-1: 0.30;
+  --glow-2: 0.20;
+  --grid-line: rgba(124, 92, 255, 0.045);
+  color-scheme: dark;
+}
+
+/* ── Light theme overrides ── */
+.light {
+  --color-bg: #f6f7fb;
+  --color-bg-soft: #eef0f7;
+  --color-card: #ffffff;
+  --color-card-hover: #f3f4fa;
+  --color-border: #e3e5ef;
+  --color-border-hover: #cdd0e0;
+  --color-text: #15151f;
+  --color-text-dim: #4c4c63;
+  --color-text-faint: #8181a0;
+  --color-accent: #6d4bff;
+  --color-accent2: #008db0;
+
+  --glow-1: 0.16;
+  --glow-2: 0.12;
+  --grid-line: rgba(109, 75, 255, 0.05);
+  color-scheme: light;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background: rgba(124, 92, 255, 0.3);
+  color: #fff;
+}
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-border-hover); border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
+
+.text-gradient {
+  background: linear-gradient(120deg, #7c5cff 0%, #00d4ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-accent {
+  background: linear-gradient(120deg, #7c5cff 0%, #00d4ff 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
