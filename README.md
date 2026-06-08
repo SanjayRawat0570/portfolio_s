@@ -55,3 +55,4 @@ vercel
 ```
 Add the same env vars (`RESEND_API_KEY`, etc.) in the Vercel project settings → Environment Variables.
 Or push to GitHub and import at https://vercel.com/new.
+# portfolio_s
