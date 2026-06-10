@@ -4,8 +4,9 @@ export const profile = {
   email: "sanjayrawat0570@gmail.com",
   phone: "+91 6263801708",
   // ── Update these with your real URLs ──
-  github: "https://github.com/",
-  linkedin: "https://linkedin.com/in/",
+  github: "https://github.com/SanjayRawat0570",
+  linkedin: "https://www.linkedin.com/in/sanjay-rawat-01831b259",
+  leetcode: "https://leetcode.com/u/sanjayRawat/",
   resumeUrl: "/Sanjay_Rawat_Resume.pdf",
   summary:
     "Aspiring Software Engineer with hands-on experience in full-stack web development using React, Next.js, TypeScript, Node.js, and PostgreSQL. I build scalable applications, REST APIs, and AI-powered systems with multi-agent orchestration and modern DevOps.",

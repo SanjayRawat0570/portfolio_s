@@ -14,6 +14,9 @@ export default function Footer() {
           <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-accent2">
             LinkedIn
           </a>
+          <a href={profile.leetcode} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-accent2">
+            LeetCode
+          </a>
           <a href={`mailto:${profile.email}`} className="transition-colors hover:text-accent2">
             Email
           </a>

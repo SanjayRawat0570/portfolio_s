@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { profile } from "@/lib/data";
-import { GithubIcon, LinkedinIcon, MailIcon, PhoneIcon } from "./icons";
+import { GithubIcon, LinkedinIcon, LeetcodeIcon, MailIcon, PhoneIcon } from "./icons";
 
 const container = {
   hidden: {},
@@ -90,6 +90,7 @@ export default function Hero() {
           {[
             { href: profile.github, label: "GitHub", Icon: GithubIcon, ext: true },
             { href: profile.linkedin, label: "LinkedIn", Icon: LinkedinIcon, ext: true },
+            { href: profile.leetcode, label: "LeetCode", Icon: LeetcodeIcon, ext: true },
             { href: `mailto:${profile.email}`, label: "Email", Icon: MailIcon, ext: false },
             { href: `tel:${profile.phone.replace(/\s/g, "")}`, label: "Phone", Icon: PhoneIcon, ext: false },
           ].map(({ href, label, Icon, ext }) => (

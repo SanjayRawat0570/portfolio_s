@@ -16,6 +16,14 @@ export function LinkedinIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+export function LeetcodeIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" {...props}>
+      <path d="M13.48 0a1.37 1.37 0 0 0-.98.42L7.83 5.27 3.2 9.9a4.5 4.5 0 0 0 0 6.36l4.63 4.63a4.5 4.5 0 0 0 6.36 0l4.18-4.18a1.37 1.37 0 0 0-1.94-1.94l-4.18 4.18a1.76 1.76 0 0 1-2.48 0L5.14 14.3a1.76 1.76 0 0 1 0-2.48l4.63-4.63 4.67-4.85a1.37 1.37 0 0 0-.96-2.34zm5.7 9.3h-9.2a1.37 1.37 0 0 0 0 2.75h9.2a1.37 1.37 0 0 0 0-2.75z" />
+    </svg>
+  );
+}
+
 export function MailIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth={2} {...props}>
