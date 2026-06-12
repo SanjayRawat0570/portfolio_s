@@ -9,12 +9,12 @@ export const profile = {
   leetcode: "https://leetcode.com/u/sanjayRawat/",
   resumeUrl: "/Sanjay_Rawat_Resume.pdf",
   summary:
-    "Aspiring Software Engineer with hands-on experience in full-stack web development using React, Next.js, TypeScript, Node.js, and PostgreSQL. I build scalable applications, REST APIs, and AI-powered systems with multi-agent orchestration and modern DevOps.",
+    "AI Engineer specialising in multi-agent orchestration, RAG pipelines, and LLM-powered applications using LangChain, LangGraph, and the Claude API. Strong full-stack foundation in React, Next.js, FastAPI, and PostgreSQL, with hands-on experience shipping production-grade AI systems via Docker and CI/CD pipelines.",
 };
 
 export const stats = [
   { num: "800+", label: "DSA problems solved" },
-  { num: "8.40", label: "CGPA" },
+  { num: "8.38", label: "CGPA" },
   { num: "2×", label: "Dev internships" },
   { num: "Knight", label: "LeetCode rank" },
 ];
