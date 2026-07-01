@@ -49,6 +49,15 @@ export function FolderIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+export function AwardIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth={1.5} {...props}>
+      <circle cx="12" cy="8" r="6" />
+      <path d="M9 13.5 7 22l5-3 5 3-2-8.5" />
+    </svg>
+  );
+}
+
 export function ExternalIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth={2} {...props}>

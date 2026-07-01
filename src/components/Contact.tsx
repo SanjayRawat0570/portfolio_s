@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <section id="contact" className="mx-auto max-w-[1120px] px-6 py-24 text-center">
       <Reveal>
-        <span className="mb-3 block font-mono text-[15px] font-medium text-accent">05</span>
+        <span className="mb-3 block font-mono text-[15px] font-medium text-accent">06</span>
         <h2 className="mb-4 text-[clamp(2rem,5vw,3.2rem)] font-extrabold tracking-[-1.5px]">
           Let&apos;s build something together
         </h2>

@@ -80,6 +80,17 @@ export const experience = [
   },
 ];
 
+export const certifications = [
+  {
+    title: "Developing Front-End Apps with React",
+    issuer: "Coursera",
+  },
+  {
+    title: "LeetCode Knight Rank",
+    issuer: "Top 5% globally · 800+ problems solved",
+  },
+];
+
 export const projects = [
   {
     title: "Enterprise RAG System",
@@ -129,6 +140,7 @@ export const navLinks = [
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Experience" },
+  { href: "#certifications", label: "Awards" },
   { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
 ];

@@ -14,7 +14,7 @@ export default function About() {
             <p>
               I&apos;m a Computer Engineering undergraduate at{" "}
               <strong className="font-semibold text-text">SAGE University, Indore</strong>{" "}
-              (CGPA 8.40), passionate about building products that blend solid full-stack
+              (CGPA 8.38), passionate about building products that blend solid full-stack
               engineering with modern AI. From admin panels and trading dashboards to
               multi-agent AI platforms, I enjoy taking ideas from concept to production.
             </p>

@@ -7,7 +7,7 @@ import { FolderIcon, GithubIcon, ExternalIcon } from "./icons";
 export default function Projects() {
   return (
     <section id="projects" className="mx-auto max-w-[1120px] px-6 py-24">
-      <SectionHeading num="04" title="Featured projects" />
+      <SectionHeading num="05" title="Featured projects" />
 
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((p, i) => (
