@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Magnetic from "./Magnetic";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -71,24 +72,26 @@ export default function ContactForm() {
       </div>
 
       <div className="mt-5 flex flex-wrap items-center gap-4">
-        <button
-          type="submit"
-          disabled={status === "loading"}
-          className="inline-flex items-center gap-2 rounded-xl bg-gradient-accent px-7 py-3 font-semibold text-white shadow-[0_8px_24px_-8px_rgba(124,92,255,.6)] transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
-        >
-          {status === "loading" ? (
-            <>
-              <motion.span
-                animate={{ rotate: 360 }}
-                transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
-                className="inline-block h-4 w-4 rounded-full border-2 border-white/40 border-t-white"
-              />
-              Sending…
-            </>
-          ) : (
-            "Send message"
-          )}
-        </button>
+        <Magnetic strength={0.2}>
+          <button
+            type="submit"
+            disabled={status === "loading"}
+            className="inline-flex items-center gap-2 rounded-xl bg-gradient-accent px-7 py-3 font-semibold text-white shadow-[0_8px_24px_-8px_rgba(124,92,255,.6)] transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
+          >
+            {status === "loading" ? (
+              <>
+                <motion.span
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
+                  className="inline-block h-4 w-4 rounded-full border-2 border-white/40 border-t-white"
+                />
+                Sending…
+              </>
+            ) : (
+              "Send message"
+            )}
+          </button>
+        </Magnetic>
 
         <AnimatePresence mode="wait">
           {status === "success" && (

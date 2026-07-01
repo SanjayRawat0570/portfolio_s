@@ -1,6 +1,7 @@
 import { projects } from "@/lib/data";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
+import TiltCard from "./TiltCard";
 import { FolderIcon, GithubIcon, ExternalIcon } from "./icons";
 
 export default function Projects() {
@@ -11,7 +12,10 @@ export default function Projects() {
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((p, i) => (
           <Reveal key={p.title} delay={(i % 2) * 0.1}>
-            <article className="flex h-full flex-col rounded-2xl border border-border bg-card p-7 transition-all hover:-translate-y-1.5 hover:border-border-hover hover:shadow-[0_20px_40px_-20px_rgba(0,0,0,.6)]">
+            <TiltCard
+              maxTilt={8}
+              className="flex h-full flex-col rounded-2xl border border-border bg-card p-7 transition-colors hover:border-border-hover hover:shadow-[0_20px_40px_-20px_rgba(0,0,0,.6)]"
+            >
               <div className="mb-5 flex items-center justify-between">
                 <span className="text-accent">
                   <FolderIcon />
@@ -67,7 +71,7 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
-            </article>
+            </TiltCard>
           </Reveal>
         ))}
       </div>

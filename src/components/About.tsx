@@ -1,6 +1,7 @@
 import { stats } from "@/lib/data";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
+import TiltCard from "./TiltCard";
 
 export default function About() {
   return (
@@ -36,12 +37,15 @@ export default function About() {
         <div className="grid grid-cols-2 gap-4">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.08}>
-              <div className="rounded-2xl border border-border bg-card p-6 text-center transition-all hover:-translate-y-1 hover:border-border-hover">
+              <TiltCard
+                maxTilt={12}
+                className="rounded-2xl border border-border bg-card p-6 text-center transition-colors hover:border-border-hover"
+              >
                 <span className="block text-[2rem] font-extrabold tracking-[-1px] text-gradient">
                   {s.num}
                 </span>
                 <span className="text-[13.5px] text-text-faint">{s.label}</span>
-              </div>
+              </TiltCard>
             </Reveal>
           ))}
         </div>

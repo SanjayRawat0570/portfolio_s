@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { navLinks, profile } from "@/lib/data";
 import ThemeToggle from "./ThemeToggle";
+import Magnetic from "./Magnetic";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -28,9 +29,11 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-[1120px] items-center justify-between px-6 py-4">
-        <a href="#hero" className="text-[22px] font-extrabold tracking-tight">
-          SR<span className="text-accent">.</span>
-        </a>
+        <Magnetic strength={0.3}>
+          <a href="#hero" className="text-[22px] font-extrabold tracking-tight">
+            SR<span className="text-accent">.</span>
+          </a>
+        </Magnetic>
 
         <div className="hidden items-center gap-8 md:flex">
           {navLinks.map((l) => (
@@ -42,14 +45,16 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a
-            href={profile.resumeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-[10px] border border-border-hover px-4 py-2 text-[14.5px] font-medium transition-all hover:border-accent hover:bg-accent/10"
-          >
-            Resume
-          </a>
+          <Magnetic strength={0.3}>
+            <a
+              href={profile.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-[10px] border border-border-hover px-4 py-2 text-[14.5px] font-medium transition-all hover:border-accent hover:bg-accent/10"
+            >
+              Resume
+            </a>
+          </Magnetic>
           <ThemeToggle />
         </div>
 

@@ -1,6 +1,7 @@
 import { skills } from "@/lib/data";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
+import TiltCard from "./TiltCard";
 
 export default function Skills() {
   return (
@@ -10,7 +11,10 @@ export default function Skills() {
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {skills.map((group, i) => (
           <Reveal key={group.title} delay={(i % 3) * 0.08}>
-            <div className="group h-full rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:border-border-hover hover:bg-card-hover">
+            <TiltCard
+              maxTilt={6}
+              className="h-full rounded-2xl border border-border bg-card p-6 transition-colors hover:border-border-hover hover:bg-card-hover"
+            >
               <h3 className="mb-4 flex items-center gap-2.5 text-[1.1rem] font-semibold">
                 <span className="text-xl">{group.icon}</span>
                 {group.title}
@@ -25,7 +29,7 @@ export default function Skills() {
                   </span>
                 ))}
               </div>
-            </div>
+            </TiltCard>
           </Reveal>
         ))}
       </div>
