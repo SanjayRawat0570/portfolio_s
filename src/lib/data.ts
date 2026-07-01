@@ -1,6 +1,6 @@
 export const profile = {
   name: "Sanjay Rawat",
-  role: "Software Engineer",
+  role: "AI Engineer",
   email: "sanjayrawat0570@gmail.com",
   phone: "+91 6263801708",
   // ── Update these with your real URLs ──
@@ -62,9 +62,9 @@ export const experience = [
     location: "Remote",
     date: "Sep 2025 – Nov 2025",
     points: [
-      "Developed a full-stack trading education platform to help new traders understand live stock markets and investment strategies.",
-      "Implemented real-time stock data visualization to display live profit, loss, and historical trading performance.",
-      "Built interactive dashboards showing user-wise earnings, losses, and complete transaction history using live APIs.",
+      "Built full-stack trading education platform using React and Node.js/Express for learning live stock markets and investment strategies.",
+      "Implemented real-time stock visualization with Chart.js and live APIs displaying profit/loss, trends, and technical indicators (RSI, Bollinger Bands, MACD).",
+      "Developed interactive dashboards with earnings tracking, win rates, risk analytics, and responsive design for desktop, tablet, and mobile.",
     ],
   },
   {
@@ -73,41 +73,55 @@ export const experience = [
     location: "Remote",
     date: "Jun 2025 – Sep 2025",
     points: [
-      "Developed core admin panel features including order listing and creation using React, Tailwind CSS, and Redux.",
-      "Built reusable and responsive UI components to ensure scalable and consistent design.",
-      "Integrated REST APIs for real-time data handling and smooth admin workflows.",
+      "Developed comprehensive admin dashboard with React and Redux managing order workflows including listing with filtering, creation, and full CRUD operations.",
+      "Built reusable UI component library (forms, data tables, modals, notifications) following consistent design patterns for scalability.",
+      "Integrated REST APIs with comprehensive error handling, loading states, and optimistic UI updates for seamless real-time synchronization.",
     ],
   },
 ];
 
 export const projects = [
   {
+    title: "Enterprise RAG System",
+    tagline: "Production-Ready RAG Platform",
+    description:
+      "A production-ready RAG platform with end-to-end workflow orchestration including document ingestion, semantic chunking, hybrid search, reranking, and LLM generation with citation extraction. Designed for 100% offline-first operation with an optional Gemini integration.",
+    points: [
+      "100% offline-first architecture with multi-provider LLM router (Claude, OpenAI, Ollama)",
+      "Hybrid search with reranking, Redis caching, and scalability adapters for Qdrant/Weaviate",
+      "Prometheus/Grafana monitoring, Jaeger tracing, and 56 pytest tests",
+    ],
+    tech: ["Python", "FastAPI", "Next.js 14", "Docker", "Prometheus", "Grafana", "Jaeger", "PostgreSQL", "Qdrant", "Redis"],
+    github: "https://github.com/SanjayRawat0570/RAG_SERVER",
+    live: "https://rag-frontend-smoky.vercel.app/",
+  },
+  {
+    title: "Smart Coaching Platform",
+    tagline: "AI Coaching Institute for JEE/NEET",
+    description:
+      "An AI coaching platform for JEE/NEET using 8 LangGraph agents for doubt resolution, adaptive tests, progress tracking, at-risk detection, parent reports, and rank prediction. Deployed entirely on free-tier services.",
+    points: [
+      "8 LangGraph agents covering doubt resolution, adaptive tests, and rank prediction",
+      "6 RAG patterns (Agentic, HyDE, RAPTOR, CRAG, web fallback, CrossEncoder) with LLM fallback chain",
+      "Multi-tenant system on Supabase + Qdrant Cloud; FastAPI on HuggingFace Spaces, Next.js on Vercel",
+    ],
+    tech: ["LangGraph", "Groq", "Gemini", "Supabase", "Qdrant Cloud", "FastAPI", "Next.js 14", "React 18"],
+    github: "https://github.com/SanjayRawat0570/coaching_inst_server",
+    live: "https://coaching-inst-ui.vercel.app/",
+  },
+  {
     title: "InsightLoop",
     tagline: "AI-Native Business Intelligence Platform",
     description:
-      "A full-stack AI-powered BI platform where users connect data sources and query them in plain English. A 5-agent LangGraph pipeline — Query Writer, Data Analyst, Chart Selector, Narrative, and Report Compiler — is orchestrated via a state machine.",
+      "An AI BI platform enabling non-technical users to query databases (PostgreSQL, MongoDB, APIs, CSV) in natural English using a 5-agent LangGraph pipeline, with real-time WebSocket streaming of agent execution steps.",
     points: [
-      "5-agent LangGraph state-machine pipeline",
-      "Real-time agent trace streaming over WebSockets",
-      "Celery-scheduled PDF reports with email & S3 storage",
+      "5-agent LangGraph pipeline for natural-language database querying",
+      "Real-time WebSocket streaming of agent execution steps with metrics",
+      "Automated PDF report generation via Celery/S3; deployed on Vercel + Railway with auto-scaling",
     ],
-    tech: ["Next.js 14", "FastAPI", "LangChain", "LangGraph", "Claude API", "PostgreSQL", "Redis", "Docker"],
-    github: "https://github.com/",
-    live: "",
-  },
-  {
-    title: "NexusAI",
-    tagline: "Enterprise Support Agent Orchestrator",
-    description:
-      "An enterprise-grade multi-agent AI customer support system with intelligent query routing. An orchestrator agent classifies and forwards queries to specialized agents, exposed through REST APIs with CORS support and containerized with Docker.",
-    points: [
-      "Orchestrator agent with intelligent query routing",
-      "REST APIs with CORS, fully containerized",
-      "Structured logging & error handling for reliability",
-    ],
-    tech: ["Python", "FastAPI", "Multi-Agent Systems", "Docker"],
-    github: "https://github.com/",
-    live: "",
+    tech: ["Next.js 14", "FastAPI", "LangGraph", "Claude API", "PostgreSQL", "Redis", "Celery", "Docker"],
+    github: "https://github.com/SanjayRawat0570",
+    live: "https://insightloop-eta.vercel.app",
   },
 ];
 
