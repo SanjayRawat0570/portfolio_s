@@ -7,9 +7,9 @@ export const profile = {
   github: "https://github.com/SanjayRawat0570",
   linkedin: "https://www.linkedin.com/in/sanjay-rawat-01831b259",
   leetcode: "https://leetcode.com/u/sanjayRawat/",
-  resumeUrl: "/Sanjay_Rawat_Resume.pdf",
+  resumeUrl: "/Sanjay_Resume.pdf",
   summary:
-    "AI Engineer specialising in multi-agent orchestration, RAG pipelines, and LLM-powered applications using LangChain, LangGraph, and the Claude API. Strong full-stack foundation in React, Next.js, FastAPI, and PostgreSQL, with hands-on experience shipping production-grade AI systems via Docker and CI/CD pipelines.",
+    "AI Engineer with expertise in LLM applications, multi-agent systems, and RAG pipelines. Full-stack developer skilled in Python, FastAPI, Next.js, and building production-ready AI systems deployed on Vercel, Railway, and HuggingFace Spaces.",
 };
 
 export const stats = [
@@ -31,7 +31,7 @@ export const skills = [
   {
     icon: "💻",
     title: "Languages",
-    items: ["C++", "TypeScript", "JavaScript", "Python", "SQL", "HTML/CSS"],
+    items: ["Python", "C++", "TypeScript", "JavaScript", "SQL", "HTML/CSS"],
   },
   {
     icon: "🎨",
@@ -41,7 +41,7 @@ export const skills = [
   {
     icon: "⚙️",
     title: "Backend",
-    items: ["Node.js", "Express.js", "FastAPI", "Flask", "REST APIs", "Go", "JWT", "WebSockets"],
+    items: ["FastAPI", "Flask", "Node.js", "Express.js", "REST APIs", "JWT", "WebSockets"],
   },
   {
     icon: "🗄️",
@@ -80,15 +80,26 @@ export const experience = [
   },
 ];
 
+export const certifications = [
+  {
+    title: "Developing Front-End Apps with React",
+    issuer: "Coursera",
+  },
+  {
+    title: "LeetCode Knight Rank",
+    issuer: "Top 5% globally · 800+ problems solved",
+  },
+];
+
 export const projects = [
   {
     title: "Enterprise RAG System",
     tagline: "Production-Ready RAG Platform",
     description:
-      "A production-ready RAG platform with end-to-end workflow orchestration including document ingestion, semantic chunking, hybrid search, reranking, and LLM generation with citation extraction. Designed for 100% offline-first operation with an optional Gemini integration.",
+      "Built production-ready RAG platform with end-to-end workflow orchestration including document ingestion, semantic chunking, hybrid search, reranking, and LLM generation with citation extraction.",
     points: [
-      "100% offline-first architecture with multi-provider LLM router (Claude, OpenAI, Ollama)",
-      "Hybrid search with reranking, Redis caching, and scalability adapters for Qdrant/Weaviate",
+      "100% offline-first architecture with deterministic answering, optional Gemini integration, and multi-provider LLM router supporting Claude, OpenAI, and Ollama",
+      "FastAPI backend with vector store, Redis caching, and scalability adapters for Qdrant/Weaviate",
       "Prometheus/Grafana monitoring, Jaeger tracing, and 56 pytest tests",
     ],
     tech: ["Python", "FastAPI", "Next.js 14", "Docker", "Prometheus", "Grafana", "Jaeger", "PostgreSQL", "Qdrant", "Redis"],
@@ -99,11 +110,11 @@ export const projects = [
     title: "Smart Coaching Platform",
     tagline: "AI Coaching Institute for JEE/NEET",
     description:
-      "An AI coaching platform for JEE/NEET using 8 LangGraph agents for doubt resolution, adaptive tests, progress tracking, at-risk detection, parent reports, and rank prediction. Deployed entirely on free-tier services.",
+      "Engineered AI coaching platform for JEE/NEET using 8 LangGraph agents for doubt resolution, adaptive tests, progress tracking, at-risk detection, parent reports, and rank prediction.",
     points: [
-      "8 LangGraph agents covering doubt resolution, adaptive tests, and rank prediction",
-      "6 RAG patterns (Agentic, HyDE, RAPTOR, CRAG, web fallback, CrossEncoder) with LLM fallback chain",
-      "Multi-tenant system on Supabase + Qdrant Cloud; FastAPI on HuggingFace Spaces, Next.js on Vercel",
+      "6 RAG patterns (Agentic, HyDE, RAPTOR, CRAG, web fallback, CrossEncoder) with LLM fallback chain ensuring reliability and cost optimization",
+      "Multi-tenant system on Supabase + Qdrant Cloud",
+      "FastAPI on HuggingFace Spaces, Next.js on Vercel, React Native via Expo — entirely on free-tier services",
     ],
     tech: ["LangGraph", "Groq", "Gemini", "Supabase", "Qdrant Cloud", "FastAPI", "Next.js 14", "React 18"],
     github: "https://github.com/SanjayRawat0570/coaching_inst_server",
@@ -113,11 +124,11 @@ export const projects = [
     title: "InsightLoop",
     tagline: "AI-Native Business Intelligence Platform",
     description:
-      "An AI BI platform enabling non-technical users to query databases (PostgreSQL, MongoDB, APIs, CSV) in natural English using a 5-agent LangGraph pipeline, with real-time WebSocket streaming of agent execution steps.",
+      "Developed AI BI platform enabling non-technical users to query databases (PostgreSQL, MongoDB, APIs, CSV) in natural English using 5-agent LangGraph pipeline.",
     points: [
-      "5-agent LangGraph pipeline for natural-language database querying",
-      "Real-time WebSocket streaming of agent execution steps with metrics",
-      "Automated PDF report generation via Celery/S3; deployed on Vercel + Railway with auto-scaling",
+      "Real-time WebSocket streaming showing agent execution steps with metrics",
+      "Integrated Claude API for query understanding and context-aware generation",
+      "Automated PDF report generation via Celery/S3, deployed frontend on Vercel, backend on Railway with auto-scaling — live at insightloop-eta.vercel.app with full authentication",
     ],
     tech: ["Next.js 14", "FastAPI", "LangGraph", "Claude API", "PostgreSQL", "Redis", "Celery", "Docker"],
     github: "https://github.com/SanjayRawat0570",
@@ -129,6 +140,7 @@ export const navLinks = [
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Experience" },
+  { href: "#certifications", label: "Awards" },
   { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
 ];
