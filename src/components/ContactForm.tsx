@@ -39,10 +39,10 @@ export default function ContactForm() {
   }
 
   const inputCls =
-    "w-full rounded-xl border border-border bg-bg-soft px-4 py-3 text-[15px] text-text outline-none transition-colors placeholder:text-text-faint focus:border-accent";
+    "w-full rounded-2xl border border-border bg-bg-soft px-4 py-3 text-[15px] text-text outline-none transition-colors placeholder:text-text-faint focus:border-accent focus:ring-4 focus:ring-accent/10";
 
   return (
-    <form onSubmit={onSubmit} className="mx-auto mt-12 max-w-[560px] text-left">
+    <form onSubmit={onSubmit} className="mt-5 text-left">
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="mb-1.5 block text-[13px] font-medium text-text-dim">
@@ -76,14 +76,14 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={status === "loading"}
-            className="inline-flex items-center gap-2 rounded-xl bg-gradient-accent px-7 py-3 font-semibold text-white shadow-[0_8px_24px_-8px_rgba(124,92,255,.6)] transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
+            className="inline-flex items-center gap-2 rounded-full bg-text px-7 py-3 text-[14.5px] font-medium text-bg transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
           >
             {status === "loading" ? (
               <>
                 <motion.span
                   animate={{ rotate: 360 }}
                   transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
-                  className="inline-block h-4 w-4 rounded-full border-2 border-white/40 border-t-white"
+                  className="inline-block h-4 w-4 rounded-full border-2 border-bg/40 border-t-bg"
                 />
                 Sending…
               </>
@@ -100,7 +100,7 @@ export default function ContactForm() {
               initial={{ opacity: 0, x: -8 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0 }}
-              className="text-[14px] font-medium text-green-400"
+              className="text-[14px] font-medium text-green-500"
             >
               ✓ Thanks! Your message is on its way.
             </motion.span>
@@ -111,7 +111,7 @@ export default function ContactForm() {
               initial={{ opacity: 0, x: -8 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0 }}
-              className="text-[14px] font-medium text-red-400"
+              className="text-[14px] font-medium text-red-500"
             >
               {error}
             </motion.span>

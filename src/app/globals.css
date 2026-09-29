@@ -4,47 +4,48 @@
    They are referenced via var(), so overriding them in .light re-themes
    every utility at runtime. */
 @theme {
-  --color-bg: #0a0a0f;
-  --color-bg-soft: #11111a;
-  --color-card: #14141f;
-  --color-card-hover: #1a1a28;
-  --color-border: #232333;
-  --color-border-hover: #34344a;
-  --color-text: #e8e8f0;
-  --color-text-dim: #a0a0b8;
-  --color-text-faint: #6b6b85;
-  --color-accent: #7c5cff;
-  --color-accent2: #00d4ff;
+  --color-bg: #09090b;
+  --color-bg-soft: #111113;
+  --color-card: #141417;
+  --color-card-hover: #18181c;
+  --color-border: #232328;
+  --color-border-hover: #34343b;
+  --color-text: #f4f4f5;
+  --color-text-dim: #a1a1aa;
+  --color-text-faint: #6b6b76;
+  --color-accent: #ff6b3d;
+  --color-accent2: #ffb224;
 
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-serif: var(--font-instrument), ui-serif, Georgia, serif;
 }
 
-/* Non-theme vars used directly in inline styles (Background.tsx) */
+/* Non-theme vars used directly in inline styles */
 :root {
-  --glow-1: 0.30;
-  --glow-2: 0.20;
-  --grid-line: rgba(124, 92, 255, 0.045);
+  --dot: rgba(255, 255, 255, 0.07);
+  --glow: rgba(255, 107, 61, 0.14);
+  --spot: rgba(255, 107, 61, 0.10);
   color-scheme: dark;
 }
 
 /* ── Light theme overrides ── */
 .light {
-  --color-bg: #f6f7fb;
-  --color-bg-soft: #eef0f7;
+  --color-bg: #f5f4f1;
+  --color-bg-soft: #eeede9;
   --color-card: #ffffff;
-  --color-card-hover: #f3f4fa;
-  --color-border: #e3e5ef;
-  --color-border-hover: #cdd0e0;
-  --color-text: #15151f;
-  --color-text-dim: #4c4c63;
-  --color-text-faint: #8181a0;
-  --color-accent: #6d4bff;
-  --color-accent2: #008db0;
+  --color-card-hover: #fbfaf8;
+  --color-border: #e4e2dc;
+  --color-border-hover: #d0cdc4;
+  --color-text: #18181b;
+  --color-text-dim: #52525b;
+  --color-text-faint: #8a8a93;
+  --color-accent: #e8531f;
+  --color-accent2: #b8740a;
 
-  --glow-1: 0.16;
-  --glow-2: 0.12;
-  --grid-line: rgba(109, 75, 255, 0.05);
+  --dot: rgba(0, 0, 0, 0.07);
+  --glow: rgba(232, 83, 31, 0.10);
+  --spot: rgba(232, 83, 31, 0.07);
   color-scheme: light;
 }
 
@@ -54,7 +55,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 90px;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -67,8 +68,8 @@ body {
 }
 
 ::selection {
-  background: rgba(124, 92, 255, 0.3);
-  color: #fff;
+  background: color-mix(in srgb, var(--color-accent) 30%, transparent);
+  color: var(--color-text);
 }
 
 ::-webkit-scrollbar { width: 10px; }
@@ -77,16 +78,30 @@ body {
 ::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
 
 .text-gradient {
-  background: linear-gradient(120deg, #7c5cff 0%, #00d4ff 100%);
+  background: linear-gradient(120deg, var(--color-accent) 0%, var(--color-accent2) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .bg-gradient-accent {
-  background: linear-gradient(120deg, #7c5cff 0%, #00d4ff 100%);
+  background: linear-gradient(120deg, var(--color-accent) 0%, var(--color-accent2) 100%);
+}
+
+/* Infinite horizontal scroller used by the tech-stack tile */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+.marquee-mask {
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .animate-marquee { animation: none; }
 }

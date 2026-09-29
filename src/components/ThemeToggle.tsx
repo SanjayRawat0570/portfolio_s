@@ -25,7 +25,7 @@ export default function ThemeToggle() {
     <button
       onClick={toggle}
       aria-label="Toggle color theme"
-      className="grid h-9 w-9 place-items-center rounded-lg border border-border bg-bg-soft text-text-dim transition-all hover:border-accent hover:text-text"
+      className="grid h-9 w-9 place-items-center rounded-full border border-border bg-bg-soft text-text-dim transition-all hover:border-accent hover:text-text"
     >
       <motion.span
         key={mounted ? String(light) : "init"}

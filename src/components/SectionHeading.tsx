@@ -1,14 +1,23 @@
 import Reveal from "./Reveal";
 
-export default function SectionHeading({ num, title }: { num: string; title: string }) {
+export default function SectionHeading({
+  num,
+  label,
+  title,
+}: {
+  num: string;
+  label: string;
+  title: React.ReactNode;
+}) {
   return (
     <Reveal>
-      <div className="mb-12 flex items-center gap-4">
-        <span className="font-mono text-[15px] font-medium text-accent">{num}</span>
-        <h2 className="text-[clamp(1.8rem,4vw,2.6rem)] font-bold tracking-[-1px]">
+      <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+        <h2 className="text-[clamp(2rem,4.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.04em]">
           {title}
         </h2>
-        <span className="h-px flex-1 bg-gradient-to-r from-border to-transparent" />
+        <span className="rounded-full border border-border bg-card px-3 py-1 font-mono text-[12px] uppercase tracking-wider text-text-faint">
+          <span className="text-accent">{num}</span> / {label}
+        </span>
       </div>
     </Reveal>
   );
