@@ -7,7 +7,7 @@ export const profile = {
   github: "https://github.com/SanjayRawat0570",
   linkedin: "https://www.linkedin.com/in/sanjay-rawat-01831b259",
   leetcode: "https://leetcode.com/u/sanjayRawat/",
-  resumeUrl: "/Sanjay_Resume.pdf",
+  resumeUrl: "https://drive.google.com/file/d/1j7aWC5uyKKmG9zmGaGR-HtwdhBzFNmlt/view?usp=sharing",
   summary:
     "AI Engineer with expertise in LLM applications, multi-agent systems, and RAG pipelines. Full-stack developer skilled in Python, FastAPI, Next.js, and building production-ready AI systems deployed on Vercel, Railway, and HuggingFace Spaces.",
 };
